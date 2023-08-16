@@ -2,7 +2,7 @@
 if(isset($_POST['add_to_cart'])){
 
 if($user_id == ''){
-   header('location:user_login.php');
+   echo "<p style='color:red;'>Login before purchasing!</p>";
 }else{
    $pid = $_POST['pid'];
    $sql = "SELECT * FROM products WHERE id = :pid";
